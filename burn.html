@@ -72,8 +72,44 @@ Melalui sistem ini, kami ingin menghadirkan sebuah ekosistem kota yang cerdas da
       </details>
 
       <details>
-        <summary>d. Pengembangan Model AI</summary>
-        <p>Model dikembangkan menggunakan YOLOv5 dengan PyTorch. Model dilatih untuk mengenali jenis kendaraan dan mengukur tingkat kepadatan lalu lintas dari video.</p>
+        <summary>d. Model AI yang digunakan </summary>
+        <p>1. Computer Vision Model (untuk analisis video CCTV)
+Model utama yang digunakan untuk memproses data video dari CCTV adalah Convolutional Neural Network (CNN), khususnya arsitektur yang dioptimalkan untuk deteksi objek dan aktivitas seperti:
+
+YOLOv5 atau YOLOv8 (You Only Look Once)
+Cocok untuk real-time object detection (misalnya mendeteksi kendaraan, pejalan kaki, atau ambulans di jalan).
+
+EfficientDet
+Digunakan untuk deteksi objek dengan efisiensi tinggi, bisa disesuaikan untuk mendeteksi kerumunan, kecelakaan, atau kondisi darurat.
+
+OpenPose atau MediaPipe (untuk analisis pergerakan manusia)
+Jika ingin mendeteksi aktivitas mencurigakan atau orang jatuh di area publik.
+
+2. Reinforcement Learning / Optimization Model (untuk rekomendasi pengaturan lalu lintas)
+Untuk memberikan rekomendasi pengaturan lalu lintas secara otomatis, digunakan model Reinforcement Learning (RL) seperti:
+
+DQN (Deep Q-Network) atau PPO (Proximal Policy Optimization)
+Model ini bisa belajar mengatur durasi lampu lalu lintas secara dinamis berdasarkan kondisi real-time untuk mengurangi kemacetan.
+
+3. Anomaly Detection Model (untuk deteksi kejadian darurat)
+Untuk mendeteksi kejadian tidak biasa seperti tabrakan, kebakaran, atau suara keras di malam hari, digunakan model:
+
+Autoencoder atau LSTM-based anomaly detection
+Mendeteksi pola anomali dari sensor audio, getaran, atau data visual secara real-time.
+
+4. Natural Language Processing (NLP) Model (jika integrasi chatbot atau laporan warga digunakan)
+Jika platform ini dilengkapi dengan fitur pelaporan masyarakat atau chatbot darurat, digunakan model NLP seperti:
+
+BERT, T5, atau GPT-based models
+Untuk memahami laporan dalam bahasa alami, misalnya "Saya lihat kecelakaan di dekat RSUD Jakarta Timur" dan langsung mengaitkannya dengan lokasi dan unit yang relevan.
+
+5. Geospatial AI (untuk analisis lokasi dan peta)
+Digunakan untuk menghubungkan data dengan peta kota secara real-time, misalnya:
+
+GeoAI dengan QGIS + AI models
+Untuk visualisasi interaktif posisi rumah sakit, posyandu, atau lokasi macet.
+
+</p>
       </details>
 
       <details>
