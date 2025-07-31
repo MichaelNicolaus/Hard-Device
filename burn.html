@@ -2,45 +2,10 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SmartPulse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartPulse </title>
   <link rel="stylesheet" href="burn.css" />
   <style>
-    /* Tab Style */
-    .tab-buttons button {
-      padding: 10px 20px;
-      margin-right: 5px;
-      border: none;
-      background-color: #ddd;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .tab-buttons button.active {
-      background-color: #007bff;
-      color: white;
-    }
-
-    .tab-content {
-      display: none;
-      margin-top: 20px;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 8px;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    form input, form button {
-      display: block;
-      margin-bottom: 10px;
-      padding: 8px;
-      width: 100%;
-      max-width: 400px;
-    }
-
     details {
       margin-bottom: 1em;
       background: #f8f8f8;
@@ -52,31 +17,73 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    section {
+      margin-bottom: 3em;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>SmartPulse</h1>
-  <nav>
-    <ul>
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#artikel">Artikel</a></li>
-      <li><a href="#solutions">Solusi AI</a></li>
-      <li><a href="#bantuan">Bantuan</a></li>
-      <li><a href="#chat">Chat Bot</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Navigasi -->
+  <header>
+    <h1>SmartPulse </h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#artikel">Artikel</a></li>
+        <li><a href="#solutions">Solusi AI</a></li>
+        <li><a href="#bantuan">Bantuan</a></li>
+        <li><a href="#chat">Chat Bot</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <!-- Beranda & Artikel tetap -->
-  <section id="home">
-    <h2>Beranda</h2>
-    <p>Selamat datang di <strong>AI Innovation Challenge</strong>...</p>
-    <!-- (Konten beranda tetap seperti sebelumnya) -->
-  </section>
+  <!-- Konten -->
+  <main>
+    <section id="home">
+      <h2>Beranda</h2>
+      <p>Selamat datang di <strong>AI Innovation Challenge</strong>! Platform ini dirancang untuk mendorong eksplorasi dan pengembangan solusi Artificial Intelligence untuk Smart City dan Urban Living di Indonesia.</p>
+      <p>Pada bagian ini, Anda akan menemukan penjelasan lengkap tentang pengembangan solusi yang diajukan melalui struktur metodologi berikut:</p>
+
+      <details>
+        <summary>a. Use Case Aplikasi</summary>
+        <p>Platform ini bertujuan untuk mendeteksi kemacetan lalu lintas secara real-time di kota besar menggunakan data video dari CCTV dan sensor jalan. Data dianalisis oleh model AI untuk memberikan rekomendasi pengaturan lalu lintas.</p>
+      </details>
+
+      <details>
+        <summary>b. Arsitektur Sistem & Tech Stack</summary>
+        <p>Sistem terdiri dari beberapa komponen utama:</p>
+        <ul>
+          <li><strong>Frontend:</strong> HTML, CSS (burn.css), JavaScript.</li>
+          <li><strong>Backend:</strong> Python Flask untuk API dan pengolahan data AI.</li>
+          <li><strong>Database:</strong> Firebase digunakan untuk menyimpan hasil deteksi dan log pengguna.</li>
+        </ul>
+        <p><strong>Tech Stack:</strong> TensorFlow, PyTorch, Flask, Firebase, OpenCV, JavaScript.</p>
+      </details>
+
+      <details>
+        <summary>c. Dataset</summary>
+        <p>Menggunakan dataset publik dari CityCam (video lalu lintas) dan dataset kendaraan dari Google Open Images. Dataset digunakan untuk melatih dan menguji model deteksi kendaraan berbasis YOLOv5.</p>
+      </details>
+
+      <details>
+        <summary>d. Pengembangan Model AI</summary>
+        <p>Model dikembangkan menggunakan YOLOv5 dengan PyTorch. Model dilatih untuk mengenali jenis kendaraan dan mengukur tingkat kepadatan lalu lintas dari video.</p>
+      </details>
+
+      <details>
+        <summary>e. Integrasi Model ke Environment Kode</summary>
+        <p>Model AI diintegrasikan melalui REST API berbasis Flask. Frontend mengakses API menggunakan JavaScript (AJAX) untuk menampilkan hasil deteksi secara real-time.</p>
+      </details>
+
+      <details>
+        <summary>f. Integrasi dengan IoT Device</summary>
+        <p>Saat ini belum menggunakan perangkat IoT. Namun sistem ini dapat diperluas untuk terhubung ke sensor lalu lintas atau kamera menggunakan Raspberry Pi/ESP32.</p>
+      </details>
+    </section>
+
 
   <section id="artikel">
     <h2>Artikel</h2>
