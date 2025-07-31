@@ -18,6 +18,7 @@
         <li><a href="#home">Beranda</a></li>
         <li><a href="#artikel">Artikel</a></li>
         <li><a href="#solutions">Solusi AI</a></li>
+        <li><a href="#metodologi">Metodologi</a></li>
         <li><a href="#bantuan">Bantuan</a></li>
         <li><a href="#chat">Chat Bot</a></li>
         <li><a href="#kontak">Kontak</a></li>
@@ -30,6 +31,7 @@
     <section id="home">
       <h2>Beranda</h2>
       <p>Selamat datang di platform AI Innovation Challenge.</p>
+      <p>Platform ini bertujuan untuk mendorong inovasi teknologi Artificial Intelligence dalam membangun Smart City yang berkelanjutan dan inklusif di Indonesia.</p>
     </section>
 
     <section id="artikel">
@@ -40,6 +42,34 @@
     <section id="solutions">
       <h2>Solusi AI</h2>
       <p>AI untuk lalu lintas, energi, layanan publik, dan banyak lagi.</p>
+    </section>
+
+    <section id="metodologi">
+      <h2>Metodologi</h2>
+
+      <h3>a. Use Case Aplikasi</h3>
+      <p>Platform ini bertujuan untuk mendeteksi kemacetan lalu lintas secara real-time di kota besar menggunakan data video dari CCTV dan sensor jalan, yang kemudian dianalisis oleh model AI untuk memberikan rekomendasi pengaturan lalu lintas.</p>
+
+      <h3>b. Arsitektur Sistem</h3>
+      <p>Sistem terdiri dari beberapa komponen utama:</p>
+      <ul>
+        <li><strong>Frontend:</strong> HTML, CSS (burn.css), dan JavaScript (burn.js).</li>
+        <li><strong>Backend:</strong> Python Flask untuk API pengolahan data dan integrasi model AI.</li>
+        <li><strong>Database:</strong> Firebase digunakan untuk menyimpan metadata hasil deteksi dan log aktivitas pengguna.</li>
+      </ul>
+      <p><strong>Tech stack:</strong> TensorFlow, OpenCV, Flask, Firebase, JavaScript.</p>
+
+      <h3>c. Alur Dataset</h3>
+      <p>Menggunakan dataset publik dari CityCam (video lalu lintas) dan dataset kendaraan dari Google Open Images. Dataset digunakan untuk melatih dan menguji model deteksi kendaraan berbasis YOLOv5.</p>
+
+      <h3>d. Pengembangan Model</h3>
+      <p>Model dikembangkan menggunakan YOLOv5 dengan framework PyTorch. Model dilatih menggunakan dataset kendaraan dan divalidasi dengan video lalu lintas untuk mengukur akurasi deteksi kemacetan.</p>
+
+      <h3>e. Integrasi Model ke Environment Kode</h3>
+      <p>Model AI dideploy sebagai REST API menggunakan Flask. Frontend mengakses model melalui request AJAX di JavaScript untuk mendapatkan hasil prediksi kemacetan secara real-time.</p>
+
+      <h3>f. Integrasi dengan IoT Device</h3>
+      <p>Pada tahap ini, IoT device tidak digunakan. Namun sistem dapat diperluas untuk integrasi ke sensor lalu lintas dan kamera berbasis Raspberry Pi atau ESP32 di masa depan.</p>
     </section>
 
     <section id="bantuan">
