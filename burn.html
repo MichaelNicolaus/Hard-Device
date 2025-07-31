@@ -112,46 +112,63 @@ Jakarta Timur, NU Online Jakarta Akademisi Universitas Islam Negeri (UIN) Syarif
       <button class="tab-btn" data-tab="layanan">Layanan Kesehatan</button>
     </div>
 
-    <div id="pekerjaan" class="tab-content active">
-      <h3>Jenis Pekerjaan</h3>
-      <ul>
-        <li>Data Analyst</li>
-        <li>AI Engineer</li>
-        <li>Smart City Planner</li>
-      </ul>
-      <h4>Request Informasi</h4>
-      <form>
-        <input type="text" placeholder="Nama" required />
-        <input type="text" placeholder="Umur" required />
-        <input type="text" placeholder="Pekerjaan yang dicari" required />
-        <input type="tel" placeholder="Nomor Telepon" required />
-        <input type="file" accept=".pdf,.doc,.docx" required />
-        <button type="submit">Kirim</button>
-      </form>
-    </div>
+   <!-- PEKERJAAN -->
+<div id="pekerjaan" class="tab-content" style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+  <h3>Jenis Pekerjaan</h3>
+  <ul id="jobList">
+    <li onclick="selectJob('Data Analyst')">Data Analyst</li>
+    <li onclick="selectJob('AI Engineer')">AI Engineer</li>
+    <li onclick="selectJob('Smart City Planner')">Smart City Planner</li>
+    <li onclick="selectJob('Urban Policy Specialist')">Urban Policy Specialist</li>
+    <li onclick="selectJob('IoT Technician')">IoT Technician</li>
+    <li onclick="selectJob('Sustainable Infrastructure Consultant')">Sustainable Infrastructure Consultant</li>
+    <!-- Tambah sesuai kebutuhan -->
+  </ul>
 
+  <div id="jobFormSection" style="display: none; margin-top: 20px;">
+    <h4>Request Informasi</h4>
+    <form id="jobForm">
+      <input type="text" placeholder="Nama" name="nama" required />
+      <input type="text" placeholder="Umur" name="umur" required />
+      <input type="text" id="selectedJob" name="pekerjaan" readonly />
+      <input type="tel" placeholder="Nomor Telepon" name="telepon" required />
+      <input type="file" accept=".pdf,.doc,.docx" required />
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+</div>
 
-      <div id="layanan" class="tab-content">
-        <h3>Layanan Kesehatan</h3>
-        <div>
-          <button onclick="showHospitals()">Rumah Sakit</button>
-          <button onclick="showFire()">Pemadam Kebakaran</button>
-          <button onclick="showPosyandu()">Posyandu</button>
-        </div>
-        <div id="hospitalList" style="display:none; margin-top:15px;">
-          <ul id="hospitals"></ul>
-        </div>
-        <div id="fireInfo" style="display:none; margin-top:15px;">
-          <p>Info pemadam kebakaran dapat ditambahkan di sini.</p>
-        </div>
-        <div id="posyanduInfo" style="display:none; margin-top:15px;">
-          <p>Info posyandu dapat ditambahkan di sini.</p>
-        </div>
-      </div>
-        
-      </ul>
-    </div>
-  </section>
+<!-- LAYANAN KESEHATAN -->
+<div id="layanan" class="tab-content" style="max-height: 400px; overflow-y: auto; padding-right: 10px;">
+  <h3>Layanan Kesehatan</h3>
+  <div>
+    <button onclick="showHospitals()">Rumah Sakit</button>
+    <button onclick="showFire()">Pemadam Kebakaran</button>
+    <button onclick="showPosyandu()">Posyandu</button>
+  </div>
+
+  <!-- Rumah Sakit -->
+  <div id="hospitalList" style="display:none; margin-top:15px;">
+    <ul id="hospitals"></ul>
+  </div>
+
+  <!-- Pemadam Kebakaran -->
+  <div id="fireInfo" style="display:none; margin-top:15px;">
+    <ul>
+      <li><strong>Pos Damkar Duren Sawit</strong> (Jakarta Timur) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
+      <li><strong>Pos Damkar Cempaka Putih</strong> (Jakarta Pusat) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
+    </ul>
+  </div>
+
+  <!-- Posyandu -->
+  <div id="posyanduInfo" style="display:none; margin-top:15px;">
+    <ul>
+      <li><strong>Posyandu Melati 5</strong> — RW 03 Pondok Kelapa</li>
+      <li><strong>Posyandu Anggrek</strong> — RW 04 Rawamangun</li>
+    </ul>
+  </div>
+</div>
+
 
   <!-- Bagian lain tetap -->
   <section id="bantuan"><h2>Bantuan</h2><p>Hubungi kami jika ada pertanyaan...</p></section>
