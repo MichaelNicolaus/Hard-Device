@@ -121,12 +121,25 @@ Jakarta Timur, NU Online Jakarta Akademisi Universitas Islam Negeri (UIN) Syarif
       </form>
     </div>
 
-    <div id="layanan" class="tab-content">
-      <h3>Layanan Kesehatan</h3>
-      <ul>
-        <li><strong>Rumah Sakit</strong>: RSUD Jakarta Timur (Jl. Dr. Sutomo No.1)</li>
-        <li><strong>Pemadam Kebakaran</strong>: Pos Damkar Duren Sawit (Jl. H. Naman)</li>
-        <li><strong>Posyandu</strong>: Posyandu Melati 5, RW 03 Pondok Kelapa</li>
+
+      <div id="layanan" class="tab-content">
+        <h3>Layanan Kesehatan</h3>
+        <div>
+          <button onclick="showHospitals()">Rumah Sakit</button>
+          <button onclick="showFire()">Pemadam Kebakaran</button>
+          <button onclick="showPosyandu()">Posyandu</button>
+        </div>
+        <div id="hospitalList" style="display:none; margin-top:15px;">
+          <ul id="hospitals"></ul>
+        </div>
+        <div id="fireInfo" style="display:none; margin-top:15px;">
+          <p>Info pemadam kebakaran dapat ditambahkan di sini.</p>
+        </div>
+        <div id="posyanduInfo" style="display:none; margin-top:15px;">
+          <p>Info posyandu dapat ditambahkan di sini.</p>
+        </div>
+      </div>
+        
       </ul>
     </div>
   </section>
