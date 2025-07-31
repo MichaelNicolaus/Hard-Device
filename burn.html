@@ -106,73 +106,113 @@ Jakarta Timur, NU Online Jakarta Akademisi Universitas Islam Negeri (UIN) Syarif
 
   <!-- Solusi AI Dengan Tabs -->
   <section id="solutions">
-    <h2>Solusi AI</h2>
-    <div class="tab-buttons">
-      <button class="tab-btn active" data-tab="pekerjaan">Pekerjaan</button>
-      <button class="tab-btn" data-tab="layanan">Layanan Kesehatan</button>
-    </div>
+   <h2>Solusi AI</h2>
+<!-- Tabs Utama -->
+<div>
+  <button onclick="showMainTab('pekerjaan')" class="tab-btn active">Pekerjaan</button>
+  <button onclick="showMainTab('layanan')" class="tab-btn">Layanan Kesehatan</button>
+</div>
 
-        <div>
-          <!-- TAB UTAMA -->
-          <div style="margin-bottom: 15px;">
-            <button onclick="showMainTab('pekerjaan')">Pekerjaan</button>
-            <button onclick="showMainTab('layanan')">Layanan Kesehatan</button>
-          </div>
-        
-          <!-- TAB PEKERJAAN -->
-          <div id="pekerjaan" class="main-tab" style="display: none; max-height: 400px; overflow-y: auto;">
-            <h3>Jenis Pekerjaan</h3>
-            <ul id="jobList">
-              <li onclick="selectJob('Data Analyst')">Data Analyst</li>
-              <li onclick="selectJob('AI Engineer')">AI Engineer</li>
-              <li onclick="selectJob('Smart City Planner')">Smart City Planner</li>
-              <li onclick="selectJob('Urban Policy Specialist')">Urban Policy Specialist</li>
-              <li onclick="selectJob('IoT Technician')">IoT Technician</li>
-              <li onclick="selectJob('Sustainable Infrastructure Consultant')">Sustainable Infrastructure Consultant</li>
-            </ul>
-        
-            <div id="jobFormSection" style="display: none; margin-top: 20px;">
-              <h4>Request Informasi</h4>
-              <form id="jobForm">
-                <input type="text" placeholder="Nama" name="nama" required />
-                <input type="text" placeholder="Umur" name="umur" required />
-                <input type="text" id="selectedJob" name="pekerjaan" readonly />
-                <input type="tel" placeholder="Nomor Telepon" name="telepon" required />
-                <input type="file" accept=".pdf,.doc,.docx" required />
-                <button type="submit">Kirim</button>
-              </form>
-            </div>
-          </div>
-        
-          <!-- TAB LAYANAN -->
-          <div id="layanan" class="main-tab" style="display: none; max-height: 400px; overflow-y: auto;">
-            <h3>Layanan Kesehatan</h3>
-            <div style="margin-bottom: 10px;">
-              <button onclick="showSubTab('rs')">Rumah Sakit</button>
-              <button onclick="showSubTab('damkar')">Pemadam Kebakaran</button>
-              <button onclick="showSubTab('posyandu')">Posyandu</button>
-            </div>
+<!-- Konten Tab Utama -->
+<div id="pekerjaan" class="main-tab">
+  <h3>Jenis Pekerjaan</h3>
+  <ul>
+    <li onclick="selectJob('Data Analyst')">Data Analyst</li>
+    <li onclick="selectJob('AI Engineer')">AI Engineer</li>
+    <li onclick="selectJob('Smart City Planner')">Smart City Planner</li>
+    <li onclick="selectJob('Urban Policy Specialist')">Urban Policy Specialist</li>
+    <li onclick="selectJob('IoT Technician')">IoT Technician</li>
+    <li onclick="selectJob('Sustainable Infrastructure Consultant')">Sustainable Infrastructure Consultant</li>
+  </ul>
 
-          <!-- SUBTAB -->
-          <div id="rs" class="sub-tab" style="display:none;">
-            <ul id="hospitals"></ul>
-          </div>
-      
-          <div id="damkar" class="sub-tab" style="display:none;">
-            <ul>
-              <li><strong>Pos Damkar Duren Sawit</strong> (Jakarta Timur) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
-              <li><strong>Pos Damkar Cempaka Putih</strong> (Jakarta Pusat) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
-            </ul>
-          </div>
-      
-          <div id="posyandu" class="sub-tab" style="display:none;">
-            <ul>
-              <li><strong>Posyandu Melati 5</strong> — RW 03 Pondok Kelapa</li>
-              <li><strong>Posyandu Anggrek</strong> — RW 04 Rawamangun</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div id="jobFormSection" style="display: none;">
+    <h4>Request Informasi</h4>
+    <form id="jobForm">
+      <input type="text" placeholder="Nama" required />
+      <input type="tel" placeholder="Nomor Telepon" required />
+      <input type="text" id="selectedJob" readonly />
+      <input type="file" accept=".pdf,.doc,.docx" required />
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+</div>
+
+<div id="layanan" class="main-tab" style="display:none;">
+  <h3>Layanan Kesehatan</h3>
+  <!-- Sub Tab -->
+  <div>
+    <button onclick="showSubTab('rs')" class="sub-btn">Rumah Sakit</button>
+    <button onclick="showSubTab('damkar')" class="sub-btn">Pemadam Kebakaran</button>
+    <button onclick="showSubTab('posyandu')" class="sub-btn">Posyandu</button>
+  </div>
+
+  <!-- Konten Sub Tab -->
+  <div id="rs" class="sub-tab">
+    <ul>
+      <li><strong>RSUD Cengkareng</strong> (Jakarta Barat) — <a href="https://rsudcengkareng.jakarta.go.id" target="_blank">Website</a></li>
+      <li><strong>RSUPN Dr. Cipto Mangunkusumo</strong> (Jakarta Pusat) — <a href="https://rscm.co.id" target="_blank">Website</a></li>
+      <li><strong>RSUD Koja</strong> (Jakarta Utara) — <a href="https://rsudkoja.jakarta.go.id" target="_blank">Website</a></li>
+      <!-- Tambahkan lebih banyak di sini -->
+    </ul>
+  </div>
+
+  <div id="damkar" class="sub-tab" style="display:none;">
+    <ul>
+      <li><strong>Pos Damkar Duren Sawit</strong> (Jakarta Timur) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
+      <li><strong>Pos Damkar Cempaka Putih</strong> (Jakarta Pusat) — <a href="https://damkar.jakarta.go.id" target="_blank">Website</a></li>
+    </ul>
+  </div>
+
+  <div id="posyandu" class="sub-tab" style="display:none;">
+    <ul>
+      <li><strong>Posyandu Melati 5</strong> — RW 03 Pondok Kelapa</li>
+      <li><strong>Posyandu Anggrek</strong> — RW 04 Rawamangun</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Style -->
+<style>
+  .main-tab, .sub-tab {
+    margin-top: 10px;
+  }
+  .tab-btn, .sub-btn {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .tab-btn.active, .sub-btn.active {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+
+<!-- Script -->
+<script>
+  function showMainTab(tabName) {
+    document.querySelectorAll('.main-tab').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`button[onclick="showMainTab('${tabName}')"]`).classList.add('active');
+    document.getElementById(tabName).style.display = 'block';
+
+    // Reset subtab
+    if (tabName === 'layanan') {
+      showSubTab('rs');
+    }
+  }
+
+  function showSubTab(subName) {
+    document.querySelectorAll('.sub-tab').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.sub-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`button[onclick="showSubTab('${subName}')"]`).classList.add('active');
+    document.getElementById(subName).style.display = 'block';
+  }
+
+  function selectJob(jobName) {
+    document.getElementById("selectedJob").value = jobName;
+    document.getElementById("jobFormSection").style.display = "block";
+  }
+</script>
 
 
   <!-- Bagian lain tetap -->
