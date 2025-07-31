@@ -4,9 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Innovation Challenge</title>
-
-  <!-- CSS -->
   <link rel="stylesheet" href="burn.css" />
+  <style>
+    details {
+      margin-bottom: 1em;
+      background: #f8f8f8;
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      margin-bottom: 3em;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,7 +33,6 @@
         <li><a href="#home">Beranda</a></li>
         <li><a href="#artikel">Artikel</a></li>
         <li><a href="#solutions">Solusi AI</a></li>
-        <li><a href="#metodologi">Metodologi</a></li>
         <li><a href="#bantuan">Bantuan</a></li>
         <li><a href="#chat">Chat Bot</a></li>
         <li><a href="#kontak">Kontak</a></li>
@@ -30,56 +44,64 @@
   <main>
     <section id="home">
       <h2>Beranda</h2>
-      <p>Selamat datang di platform AI Innovation Challenge.</p>
-      <p>Platform ini bertujuan untuk mendorong inovasi teknologi Artificial Intelligence dalam membangun Smart City yang berkelanjutan dan inklusif di Indonesia.</p>
+      <p>Selamat datang di <strong>AI Innovation Challenge</strong>! Platform ini dirancang untuk mendorong eksplorasi dan pengembangan solusi Artificial Intelligence untuk Smart City dan Urban Living di Indonesia.</p>
+      <p>Pada bagian ini, Anda akan menemukan penjelasan lengkap tentang pengembangan solusi yang diajukan melalui struktur metodologi berikut:</p>
+
+      <details>
+        <summary>a. Use Case Aplikasi</summary>
+        <p>Platform ini bertujuan untuk mendeteksi kemacetan lalu lintas secara real-time di kota besar menggunakan data video dari CCTV dan sensor jalan. Data dianalisis oleh model AI untuk memberikan rekomendasi pengaturan lalu lintas.</p>
+      </details>
+
+      <details>
+        <summary>b. Arsitektur Sistem & Tech Stack</summary>
+        <p>Sistem terdiri dari beberapa komponen utama:</p>
+        <ul>
+          <li><strong>Frontend:</strong> HTML, CSS (burn.css), JavaScript.</li>
+          <li><strong>Backend:</strong> Python Flask untuk API dan pengolahan data AI.</li>
+          <li><strong>Database:</strong> Firebase digunakan untuk menyimpan hasil deteksi dan log pengguna.</li>
+        </ul>
+        <p><strong>Tech Stack:</strong> TensorFlow, PyTorch, Flask, Firebase, OpenCV, JavaScript.</p>
+      </details>
+
+      <details>
+        <summary>c. Dataset</summary>
+        <p>Menggunakan dataset publik dari CityCam (video lalu lintas) dan dataset kendaraan dari Google Open Images. Dataset digunakan untuk melatih dan menguji model deteksi kendaraan berbasis YOLOv5.</p>
+      </details>
+
+      <details>
+        <summary>d. Pengembangan Model AI</summary>
+        <p>Model dikembangkan menggunakan YOLOv5 dengan PyTorch. Model dilatih untuk mengenali jenis kendaraan dan mengukur tingkat kepadatan lalu lintas dari video.</p>
+      </details>
+
+      <details>
+        <summary>e. Integrasi Model ke Environment Kode</summary>
+        <p>Model AI diintegrasikan melalui REST API berbasis Flask. Frontend mengakses API menggunakan JavaScript (AJAX) untuk menampilkan hasil deteksi secara real-time.</p>
+      </details>
+
+      <details>
+        <summary>f. Integrasi dengan IoT Device</summary>
+        <p>Saat ini belum menggunakan perangkat IoT. Namun sistem ini dapat diperluas untuk terhubung ke sensor lalu lintas atau kamera menggunakan Raspberry Pi/ESP32.</p>
+      </details>
     </section>
 
     <section id="artikel">
       <h2>Artikel</h2>
-      <p>Kumpulan tulisan seputar AI & Smart City.</p>
+      <p>Kumpulan tulisan seputar AI, teknologi, dan solusi untuk Smart City.</p>
     </section>
 
     <section id="solutions">
       <h2>Solusi AI</h2>
-      <p>AI untuk lalu lintas, energi, layanan publik, dan banyak lagi.</p>
-    </section>
-
-    <section id="metodologi">
-      <h2>Metodologi</h2>
-
-      <h3>a. Use Case Aplikasi</h3>
-      <p>Platform ini bertujuan untuk mendeteksi kemacetan lalu lintas secara real-time di kota besar menggunakan data video dari CCTV dan sensor jalan, yang kemudian dianalisis oleh model AI untuk memberikan rekomendasi pengaturan lalu lintas.</p>
-
-      <h3>b. Arsitektur Sistem</h3>
-      <p>Sistem terdiri dari beberapa komponen utama:</p>
-      <ul>
-        <li><strong>Frontend:</strong> HTML, CSS (burn.css), dan JavaScript (burn.js).</li>
-        <li><strong>Backend:</strong> Python Flask untuk API pengolahan data dan integrasi model AI.</li>
-        <li><strong>Database:</strong> Firebase digunakan untuk menyimpan metadata hasil deteksi dan log aktivitas pengguna.</li>
-      </ul>
-      <p><strong>Tech stack:</strong> TensorFlow, OpenCV, Flask, Firebase, JavaScript.</p>
-
-      <h3>c. Alur Dataset</h3>
-      <p>Menggunakan dataset publik dari CityCam (video lalu lintas) dan dataset kendaraan dari Google Open Images. Dataset digunakan untuk melatih dan menguji model deteksi kendaraan berbasis YOLOv5.</p>
-
-      <h3>d. Pengembangan Model</h3>
-      <p>Model dikembangkan menggunakan YOLOv5 dengan framework PyTorch. Model dilatih menggunakan dataset kendaraan dan divalidasi dengan video lalu lintas untuk mengukur akurasi deteksi kemacetan.</p>
-
-      <h3>e. Integrasi Model ke Environment Kode</h3>
-      <p>Model AI dideploy sebagai REST API menggunakan Flask. Frontend mengakses model melalui request AJAX di JavaScript untuk mendapatkan hasil prediksi kemacetan secara real-time.</p>
-
-      <h3>f. Integrasi dengan IoT Device</h3>
-      <p>Pada tahap ini, IoT device tidak digunakan. Namun sistem dapat diperluas untuk integrasi ke sensor lalu lintas dan kamera berbasis Raspberry Pi atau ESP32 di masa depan.</p>
+      <p>Solusi AI yang dikembangkan mencakup area seperti: manajemen lalu lintas, konsumsi energi, layanan publik, serta keamanan dan kesehatan kota.</p>
     </section>
 
     <section id="bantuan">
       <h2>Bantuan</h2>
-      <p>Hubungi kami jika ada pertanyaan seputar kompetisi AIC.</p>
+      <p>Hubungi kami jika ada pertanyaan seputar kompetisi atau platform AIC.</p>
     </section>
 
     <section id="chat">
       <h2>Chat Bot</h2>
-      <p>Gunakan fitur chatbot untuk menjelajahi informasi lebih lanjut.</p>
+      <p>Gunakan chatbot untuk eksplorasi informasi lebih lanjut seputar proyek dan dokumentasi.</p>
     </section>
 
     <section id="kontak">
